@@ -165,7 +165,16 @@ class Score:
         """
         self.img = self.fonto.render("スコア：" + str(num), 0, (0, 0, 255))
         screen.blit(self.img, self.rct)
-        
+
+
+class Explosion:
+    def __init__(self):
+        self.img = pg.image.load("fig/explosion.gif")
+        self.img1 = pg.transform.flip(self.img, True, True)
+        explosion_list = [
+            self.img,
+
+        ]
 
 def main():
     pg.display.set_caption("たたかえ！こうかとん")
