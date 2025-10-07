@@ -211,7 +211,7 @@ def main():
                     beams[i], bombs[b] = None, None
                     bird.change_img(6, screen)
                     num += 1
-                if check_bound(beam.rct) != (True, True):
+                if check_bound(beam.rct) != (True, True):  # 画面の範囲外に出たらリストから削除する
                     beams.pop(i) 
             beams = [beam for beam in beams if beam is not None]
         bombs = [bomb for bomb in bombs if bomb is not None]
